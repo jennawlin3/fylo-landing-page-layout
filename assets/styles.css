@@ -20,6 +20,9 @@ body {
     align-items: center;
     justify-content: center;
     background-color: var(--light-grayish-blue);
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 img {
@@ -46,6 +49,7 @@ header {
 .navigation a {
     color: var(--very-dark-blue);
     text-decoration: none;
+    font-weight: 500;
 }
 
 .first-content, .second-content, .third-content {
@@ -66,6 +70,7 @@ header {
     text-align: center;
     color: var(--very-dark-blue);
     font-size: 1.8rem;
+    font-weight: 800;
 }
 
 .first-content p {
@@ -73,6 +78,7 @@ header {
     line-height: 1.7;
     margin-bottom: 30px;
     color: var(--desaturated-blue);
+    font-weight: 700;
 }
 
 #newsletter-one {
@@ -87,6 +93,7 @@ input[type="email"] {
     height: 45px;
     border: 1px solid var(--very-dark-blue);
     padding-left: 20px;
+    font-family: "Raleway", sans-serif;
 }
 
 input[type="email"]::placeholder {
@@ -100,6 +107,9 @@ input[type="submit"] {
     border: none;
     color: var(--light-grayish-blue);
     width: 100%;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 .second-content h2 {
@@ -112,15 +122,17 @@ input[type="submit"] {
     margin-bottom: 20px;
     color: var(--desaturated-blue);
     line-height: 1.7;
+    font-weight: 500;
 }
 
 .cta-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 190px;
     border-bottom: 1px solid var(--moderate-cyan);
     margin: 40px auto 0;
+    cursor: pointer;
 }
 
 .cta-btn a {
@@ -134,7 +146,7 @@ input[type="submit"] {
     margin-left: 10px;
 }
 
-.third-content {
+.reviews-container {
     padding-top: 20px;
     margin-top: 10px;
 }
@@ -154,6 +166,7 @@ input[type="submit"] {
     margin: 20px 0;
     color: var(--very-dark-blue);
     line-height: 1.7;
+    font-weight: 600;
 }
 
 .author-review {
@@ -170,11 +183,14 @@ input[type="submit"] {
 .author-info h3 {
     color: var(--very-dark-blue);
     font-size: 1rem;
+    font-weight: 800;
 }
 
 .author-info p {
     margin: 5px 0 0 0;
     color: var(--desaturated-blue);
+    font-size: 0.8rem;
+    font-weight:  600;
 }
 
 .fourth-content {
@@ -185,7 +201,7 @@ input[type="submit"] {
     align-items: center;
     background-color: var(--desaturated-blue);
     padding: 40px;
-    height: 60vh;
+    height: 70vh;
 }
 
 .fourth-content h2 {
@@ -198,6 +214,7 @@ input[type="submit"] {
     line-height: 1.7;
     text-align: center;
     margin-bottom: 30px;
+    font-weight: 500;
 }
 
 #newsletter-two {
@@ -216,4 +233,146 @@ footer {
 
 .logo-footer {
     width: 180px;
+}
+
+.phone-icon, .mail-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+footer ul {
+    margin-top: 30px;
+}
+
+footer ul li {
+    list-style-type: none;
+    padding: 5px 0;
+    color: var(--light-gray);
+}
+
+footer ul li a {
+    color: var(--light-gray);
+    text-decoration: none;
+}
+
+@media screen and (min-width:768px) {
+    body {
+        background-color: #fff;
+    }
+
+    .container {
+        width: 100%;
+    }
+
+    .first-content {
+        flex-direction: row-reverse;
+    }
+
+    .first-content img {
+        width: 50% !important;
+    }
+
+    .first-container .content-container {
+        width: 50%;
+    }
+
+    .content-container h1 {
+        text-align: start;
+    }
+
+    .content-container p {
+        text-align: start;
+    }
+
+    .second-content {
+        flex-direction: row-reverse;
+        background-color: var(--light-grayish-blue);
+        border-radius: 60px 60px 0 0;
+    }
+
+    .second-content h2 {
+        text-align: start;
+    }
+
+    .second-content img {
+        width: 50%;
+    }
+
+    .quote {
+        width: 20px !important;
+        height: 20px;
+    }
+
+    .review {
+        width: 90%;
+        box-shadow: 2px 2px 5px #ddd;
+    }
+    
+    .author-review img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        height: 60vh;
+        align-items: center;
+    }
+
+    footer ul {
+        position: relative;
+    }
+
+    .logo-footer {
+        margin-top: -50px;
+        position: absolute;
+        width: 120px;
+    }
+
+    .footer-content:first-of-type {
+        margin-top: -50px;
+    }
+}
+
+@media screen and (min-width:1000px) {
+    #newsletter-one {
+        flex-direction: row;
+    }
+
+    .fourth-content {
+        flex-direction: row;
+    }
+
+    .fourth-content {
+        padding: 0 40px;
+        width: 100%;
+        gap: 40px;
+    }
+
+    .fourth-content .content {
+        width: 50%;
+    }
+
+    .fourth-content .content p {
+        text-align: start;
+    }
+
+    .cta-btn {
+        margin: 0;
+    }
+
+    .review {
+        width: 400px;
+    }
+
+    #newsletter-two {
+        width: 45%;
+    }
+
+    #newsletter-two input[type="submit"] {
+        width: 50%;
+    }
 }
