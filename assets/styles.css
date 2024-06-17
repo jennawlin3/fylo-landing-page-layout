@@ -19,7 +19,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--light-grayish-blue);
     font-family: "Raleway", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -50,6 +49,12 @@ img {
     color: var(--very-dark-blue);
     text-decoration: none;
     font-weight: 500;
+    width: 55px;
+    text-align: center;
+}
+
+.navigation a:hover {
+    font-weight: 700;
 }
 
 .first-content, .second-content, .third-content {
@@ -105,7 +110,7 @@ input[type="email"] {
 }
 
 .invalid {
-    border-color: #ff9a9a;
+    border: 1px solid #ff9a9a !important;
 }
 
 .error {
@@ -126,10 +131,26 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+.second-content {
+    background-color: var(--light-grayish-blue);
+    margin-top: 100px;
+    position: relative;
+}
+
 .second-content h2 {
     color: var(--very-dark-blue);
     text-align: center;
     margin: 70px 0 30px;
+}
+
+.second-content::before {
+    content: "";
+    background: url(../images/bg-curve-mobile.svg);
+    width: 100vw;
+    height: 80px;
+    background-size: cover;
+    position: absolute;
+    top: -80px;
 }
 
 .second-content p {
@@ -327,6 +348,10 @@ footer {
         width: 100%;
      }
 
+     .navigation a {
+         width: 70px;
+     }
+
     .email-container {
         width: 100%;
         position: relative;
@@ -368,19 +393,18 @@ footer {
     .second-content {
         flex-direction: row-reverse;
         background-color: var(--light-grayish-blue);
-        border-radius: 60px 60px 0 0;
         margin-top: 150px;
         position: relative;
     }
 
     .second-content::before {
         content: "";
-        background-color: var(--light-grayish-blue);
-        width: 100%;
+        background: url(../images/bg-curve-desktop.svg);
+        width: 100vw;
         height: 80px;
         background-size: cover;
         position: absolute;
-        top: -50px;
+        top: -80px;
     }
 
     .second-content h2 {
@@ -404,6 +428,10 @@ footer {
     .author-review img {
         width: 30px;
         height: 30px;
+    }
+
+    .fourth-content h2 {
+        text-align: start;
     }
 
     footer {
@@ -484,6 +512,7 @@ footer {
 }
 
 @media screen and (min-width:1400px) {
+
     #newsletter-one {
         flex-direction: row;
     }
@@ -510,7 +539,7 @@ footer {
 
     .fourth-content {
         flex-direction: row;
-        height: 50vh;
+        height: 400px;
     }
 
     .fourth-content .content {
@@ -522,10 +551,11 @@ footer {
     }
 
     footer {
-        height: 50vh;
+        height: 400px;
     }
 
     .footer-container {
         max-width: 1300px;
+        height: auto;
     }
 }
